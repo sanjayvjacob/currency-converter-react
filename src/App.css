@@ -1,38 +1,16 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Figtree", sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Figtree:ital@0;1&display=swap') format('truetype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #161616;
+  font-family: "Figtree", sans-serif;
+  color: #ddd;
+  padding: 50px ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1{
+  color: #eef;
+  text-align: center ;
 }
