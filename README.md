@@ -1,5 +1,14 @@
-- added ES6 module in package.json
-- changed App.js to App.jsx and updated in index.js
-- added ../src/index.js in html
+## Currency Converter App
 
-- install axios dependencies
+## Screenshot
+
+![](./screenshot.png)
+
+## Live site URL
+
+https://sanjayvjacob.github.io/currency-converter-react/
+
+comments
+
+- added ES6 module in package.json
+- installed axios dependencies
