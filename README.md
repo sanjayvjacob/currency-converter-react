@@ -15,5 +15,5 @@ Reason: website is tunning with https and im requesting the api with http, so ch
 fix: add https to the fetch request. also, fixer.io has paid subscription for https.
 Hence,
 
-- when using http app is responding but api not working
-- when using https app is not responding at all
+- when using http, app is responding but api not working
+- when using https, app is not responding at all
