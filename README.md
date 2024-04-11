@@ -16,4 +16,4 @@ fix: add https to the fetch request. also, fixer.io has paid subscription for ht
 Hence,
 
 - when using http app is responding but api not working
-- when using htttps app is not responding at all
+- when using https app is not responding at all
