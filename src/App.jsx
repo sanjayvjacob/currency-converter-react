@@ -11,15 +11,18 @@ function App() {
   const [rates, setRates] = useState({});
 
   // Define handleAmount1Change before it's used in useEffect
-  const handleAmount1Change = useCallback((amount1) => {
-    setAmount2(format(amount1 * rates[currency2] / rates[currency1]));
-    setAmount1(amount1);
-  }, [currency1, currency2, rates]); 
+  const handleAmount1Change = useCallback(
+    (amount1) => {
+      setAmount2(format((amount1 * rates[currency2]) / rates[currency1]));
+      setAmount1(amount1);
+    },
+    [currency1, currency2, rates]
+  );
 
   useEffect(() => {
     axios
       .get(
-        "http://data.fixer.io/api/latest?access_key=fa6cf770e671dbe3ce558c3458badaab"
+        "https://data.fixer.io/api/latest?access_key=fa6cf770e671dbe3ce558c3458badaab"
       )
       .then((response) => {
         setRates(response.data.rates);
@@ -36,18 +39,18 @@ function App() {
     return number.toFixed(4);
   }
 
-  function handleCurrency1Change(currency1){
-    setAmount2(format(amount1 * rates[currency2] / rates[currency1]));
+  function handleCurrency1Change(currency1) {
+    setAmount2(format((amount1 * rates[currency2]) / rates[currency1]));
     setCurrency1(currency1);
   }
 
-  function handleAmount2Change(amount2){
-    setAmount1(format(amount2 * rates[currency1] / rates[currency2]));
+  function handleAmount2Change(amount2) {
+    setAmount1(format((amount2 * rates[currency1]) / rates[currency2]));
     setAmount2(amount2);
   }
 
-  function handleCurrency2Change(currency2){
-    setAmount1(format(amount2 * rates[currency1] / rates[currency2]));
+  function handleCurrency2Change(currency2) {
+    setAmount1(format((amount2 * rates[currency1]) / rates[currency2]));
     setCurrency2(currency2);
   }
 
@@ -73,4 +76,3 @@ function App() {
 }
 
 export default App;
-
